@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8" />
+	<!--适应手机的hotcss-->
+	<script src="./jquery-3.1.1.min.js"></script>
+	<body>
+		<input type="button" value="点击" id="click">	
+	</body>
+	<script type="text/javascript">
+	$(function(){
+		$("#click").click(function(){
+			//alert(123);
+			//return;
+			$.ajax({
+					type:"get",
+					url:"http://demo.hzlwo.com/mobile/index.php?act=store_ordering&op=ordering_list&state_type=state_new&size=&order=total_price&sc=asc&page=3&curpage=1",
+					dataType:"json",
+					success:function(data){
+						console.log(data);
+					    
+					},
+				});
+			})
+	});
+//			let datas = {},
+			
+	
+	</script>
+</html>
